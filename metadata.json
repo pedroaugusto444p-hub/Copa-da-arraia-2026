@@ -1,0 +1,6 @@
+{
+  "name": "Copa Arraiá",
+  "description": "Plataforma completa de apresentação temática junina para a Copa, contendo coreografias, roteiros e cronogramas detalhados.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

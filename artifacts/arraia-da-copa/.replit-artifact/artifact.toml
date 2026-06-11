@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "Arraiá da Copa 2026"
+version = "1.0.0"
+id = "artifacts/arraia-da-copa"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 25057
+
+[services.development]
+run = "pnpm --filter @workspace/arraia-da-copa run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/arraia-da-copa", "run", "build" ]
+publicDir = "artifacts/arraia-da-copa/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "25057"
+BASE_PATH = "/"
